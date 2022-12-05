@@ -1,0 +1,11 @@
+<div class="header">
+    <h1>Buscador de peliculas en OMDb</h1>
+</div>
+<input placeholder="titulo" [(ngModel)]="movieSearched">
+<button (click)="searchMovie(movieSearched)" >Buscar</button>
+
+<ul>
+    <li (click)="getDetails(movie)" *ngFor="let movie of movies">
+        {{movie.Title}}
+    </li>
+</ul>
