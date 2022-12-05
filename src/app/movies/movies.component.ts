@@ -31,6 +31,7 @@ export class MoviesComponent implements OnInit{
       p {
         font-family:Arial, Helvetica, sans-serif;
         font-size: 25px;
+        padding:: 5px;
       }
       h2{
         font-size: 45px;
