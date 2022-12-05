@@ -31,14 +31,14 @@ export class MoviesComponent implements OnInit{
       p {
         font-family:Arial, Helvetica, sans-serif;
         font-size: 25px;
-        padding:: 5px;
+        padding: 20px;
       }
       h2{
         font-size: 45px;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        padding: 5px;
+        padding: 20px;
       }
-      .item1 {grid-area: title; background-color: rgb(131, 131, 241); width:max-content;}
+      .item1 {grid-area: title; background-color: rgb(131, 131, 241);}
       .item2 {grid-area: released; background-color: rgb(211, 208, 208);}
       .item3 {grid-area: director; background-color: rgb(211, 208, 208);}
       .item4 {grid-area: actor; background-color: rgb(211, 208, 208);}
@@ -49,12 +49,11 @@ export class MoviesComponent implements OnInit{
       .grid{
         display: grid;
         grid-template-areas: 
-        'poster title title title tilte tilte tilte'
-        'poster released released released released released released'
-        'poster director director director director director director'
-        'poster actor actor actor actor actor actor'
-        'plot plot plot plot plot plot plot';
-        padding: 15px;
+        'poster title title title tilte tilte'
+        'poster released released released released released'
+        'poster director director director director director'
+        'poster actor actor actor actor actor'
+        'plot plot plot plot plot plot';
         gap: 10px;
         border-color: black;
       }
@@ -80,7 +79,7 @@ export class MoviesComponent implements OnInit{
     this.plotD ='<div class="item5"><p> Trama: '+this.details.Plot+'</p></div>';
     this.posterD = '<div class="item6"><img src="'+this.details.Poster+'"></div></div>';
 
-    this.windowDetails = window.open('',this.details.Title + '-details', 'width=600,height=400,left=200,top=200')
+    this.windowDetails = window.open('',this.details.Title + '-details', 'width=1000,height=800,left=200,top=200')
     this.windowDetails.document.body.innerHTML = this.detailsCSS+
     this.titleD+this.releasedD+this.directorD+this.actorsD+this.plotD+this.posterD;
   }
